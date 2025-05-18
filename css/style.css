@@ -596,6 +596,7 @@ html {
   padding: 4rem 2rem;
   max-width: 10000px;
   margin: 0 auto;
+
 }
 
 .projects-title-wrapper {
@@ -1165,6 +1166,64 @@ html {
   padding-top: 15px;
   font-size: 14px;
   color: #ddd;
+}.nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block !important;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    display: none;
+    background: linear-gradient(90deg, #0078d7, #00c3ff);
+    padding: 1rem 0;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem; /* Reduce padding for mobile */
+    flex-wrap: wrap;
+  }
+
+  header .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  header .nav-link {
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: left;
+  }
 }
 
 /* Cool glowing animation */
