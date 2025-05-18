@@ -8,24 +8,33 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<header id="main-header" style="position: fixed; top: 0; width: 100%; box-shadow: 0 2px 6px rgba(0,0,0,0.1); z-index: 999; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; font-family: 'Segoe UI', sans-serif;">
-  <div id="about" style="font-size: 1.5rem; color: #ffffff; font-weight: bold;">
-    MCP | Sahil Mohsin &mdash; <span style="font-weight: 400;"> Architecting Data Governance, Analytics & Intelligent Insights</span>
+<header id="main-header" style="position: fixed; top: 0; width: 100%; box-shadow: 0 2px 6px rgba(0,0,0,0.1); z-index: 999; padding: 1rem 2rem; font-family: 'Segoe UI', sans-serif; background: linear-gradient(90deg, #0078d7, #00c3ff);">
+  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <div style="font-size: 1.5rem; color: #ffffff; font-weight: bold;">
+      MCP | Sahil Mohsin &mdash; <span style="font-weight: 400;">Architecting Data Governance, Analytics & Intelligent Insights</span>
+    </div>
+
+    <!-- Hamburger for mobile -->
+    <div class="hamburger" onclick="toggleMenu()" style="display: none; font-size: 2rem; color: white; cursor: pointer;">
+      ☰
+    </div>
   </div>
 
-  <nav id="typed-title">
-    <ul style="display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0;">
-      <li><a href="#about" class="nav-link" style="text-decoration: none; color: #ffffff; font-weight: 500;">About</a></li>
-      <li><a href="#experience" class="nav-link" style="text-decoration: none; color: #ffffff; font-weight: 500;">Experience</a></li>
-      <li><a href="#projects" class="nav-link" style="text-decoration: none; color: #ffffff; font-weight: 500;">Projects</a></li>
-      <li><a href="#techstack" class="nav-link" style="text-decoration: none; color: #ffffff; font-weight: 500;">Tech Stack</a></li>
-      <li><a href="#certifications" class="nav-link" style="text-decoration: none; color: #ffffff; font-weight: 500;">Certifications</a></li>
-      <li><a href="#education" class="nav-link" style="text-decoration: none; color: #ffffff; font-weight: 500;">Education</a></li>
-      <li><a href="#Endorsements" class="nav-link" style="text-decoration: none; color: #ffffff; font-weight: 500;">Endorsements</a></li>
-      <li><a href="#contact" class="nav-link" style="text-decoration: none; color: #ffffff; font-weight: 500;">Contact</a></li>
+  <!-- Navigation Menu -->
+  <nav id="typed-title" class="nav-menu">
+    <ul class="nav-list">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#techstack" class="nav-link">Tech Stack</a></li>
+      <li><a href="#certifications" class="nav-link">Certifications</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#Endorsements" class="nav-link">Endorsements</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
   </nav>
 </header>
+
   <header>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" ></script>
     <nav class="navbar" >
@@ -747,7 +756,11 @@ window.addEventListener('scroll', () => {
   });
 </script>
 
-
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-list').classList.toggle('active');
+  }
+</script>
 
 
 
@@ -780,75 +793,4 @@ window.addEventListener('scroll', () => {
     <p>© 2025 Sahil | Built with 💡 & ☕</p>
   </div>
 </footer>
-<script>
-(function(){
-  // Select all sections inside this local scope
-  const sections = document.querySelectorAll('section');
-
-  // Select both nav and footer links
-  const navLinks = document.querySelectorAll('.nav-link, .footer-link');
-
-  // Set "About" active on page load
-  window.addEventListener('DOMContentLoaded', () => {
-    const defaultActive = document.querySelector('.nav-link[href="#about"], .footer-link[href="#about"]');
-    if (defaultActive) {
-      defaultActive.classList.add('active-nav');
-    }
-  });
-
-  // Activate link function
-  function activateNavLink(currentId) {
-    navLinks.forEach(link => {
-      link.classList.remove('active-nav');
-      if (link.getAttribute('href').substring(1) === currentId) {
-        link.classList.add('active-nav');
-      }
-    });
-  }
-
-  // Scroll event listener
-  window.addEventListener('scroll', () => {
-    let current = '';
-
-    if (window.scrollY < 100) {
-      current = 'about';
-    } else {
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        if (window.scrollY >= sectionTop) {
-          current = section.getAttribute('id');
-        }
-      });
-    }
-
-    if (current) activateNavLink(current);
-  });
-
-  // Click event listener for nav and footer links
-  navLinks.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const targetId = link.getAttribute('href').substring(1);
-      const headerOffset = document.querySelector('header').offsetHeight;
-
-      if (targetId === 'about') {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      } else {
-        const target = document.getElementById(targetId);
-        if (target) {
-          window.scrollTo({
-            top: target.offsetTop - headerOffset,
-            behavior: 'smooth'
-          });
-        }
-      }
-
-      activateNavLink(targetId);
-    });
-  });
-})();
-</script>
 
