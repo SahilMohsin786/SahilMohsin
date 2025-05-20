@@ -1410,7 +1410,30 @@ width: clamp(18rem, 60vw, 400rem);
     font-size: 1.5rem;
   }
 }
-
+@media (max-width: 600px) {
+  
+  .typed-name,
+  .typed-title,
+  .typed-heading,
+  .typed-cert-heading,
+  .typed-stats-heading,
+  .typed-edu-title,
+  .typed-endorsements,
+  .typed-project-title,
+  #typed-name,
+  #typed-project-title,
+  #typed-techstack,
+  #typed-endorsements {
+    min-height: 2em; /* Prevent vertical jump */
+    display: block;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: clamp(1.1rem, 5vw, 1.5rem); /* Responsive font size */
+    overflow-x: hidden;
+    /* Remove min-width and white-space: nowrap for wrapping */
+  }
+}
 @media (max-width: 480px) {
   body {
     font-size: 14px;
@@ -1506,4 +1529,20 @@ footer {
 
 
 
+}
+
+.edu-title,
+.projects-title {
+  background-color: #0047ab;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: clamp(1.2rem, 4vw, 2.2rem);
+  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  text-align: center;
+  margin: 0 auto 2rem auto;
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
 }
