@@ -12,16 +12,15 @@
 <body>
   <div id="about"></div>
 <header id="main-header" style="position: fixed; top: 0; width: 100%; box-shadow: 0 2px 6px rgba(0,0,0,0.1); z-index: 999; padding: 1rem 2rem; font-family: 'Segoe UI', sans-serif; background: linear-gradient(90deg, #0078d7, #00c3ff);">
-  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-<div style="font-size: clamp(1rem, 1.1vw, 1.5rem); color: #ffffff; font-weight: bold;">
-  MCP | Sahil Mohsin &mdash; <span style="font-weight: 400;">Architecting Data Governance, Analytics & Intelligent Insights</span>
+<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+<div style="display: flex; align-items: center; gap: 0.7rem; font-size: clamp(1rem, 1.1vw, 1.5rem); color: #ffffff; font-weight: bold;">
+  <img src="Assets/DP_Logo.jpg" alt="Sahil Mohsin" class="header-logo-img"  id="header-logo"/>
+  MCP | Sahil Mohsin <span style="font-weight: 400;">Architecting Data Governance, Analytics & Intelligent Insights</span>
 </div>
-
 <!-- Font Awesome hamburger (recommended for pro look) -->
-<div class="hamburger" onclick="toggleMenu()" style="display: none; font-size: clamp(0.8rem, 1vw, 1rem); color: white; cursor: pointer;">
+<div class="hamburger" onclick="toggleMenu()" aria-label="Open navigation" tabindex="0">
   <i class="fas fa-bars"></i>
 </div>
-  
 
 
   </div>
@@ -36,6 +35,7 @@
       <li><a href="#education" class="nav-link">Education</a></li>
       <li><a href="#Endorsements" class="nav-link">Endorsements</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
+      
     </ul>
   </nav>
 </header>
@@ -789,7 +789,11 @@ window.addEventListener('scroll', () => {
   });
 </script>
 
-
+<script>
+  document.getElementById('header-logo').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 
 </body>
 
