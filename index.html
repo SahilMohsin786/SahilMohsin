@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Sahil Mohsin – Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
@@ -10,16 +12,18 @@
 <body>
 <header id="main-header" style="position: fixed; top: 0; width: 100%; box-shadow: 0 2px 6px rgba(0,0,0,0.1); z-index: 999; padding: 1rem 2rem; font-family: 'Segoe UI', sans-serif; background: linear-gradient(90deg, #0078d7, #00c3ff);">
   <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-    <div style="font-size: 1.5rem; color: #ffffff; font-weight: bold;">
-      MCP | Sahil Mohsin &mdash; <span style="font-weight: 400;">Architecting Data Governance, Analytics & Intelligent Insights</span>
-    </div>
+<div style="font-size: clamp(1rem, 1.1vw, 1.5rem); color: #ffffff; font-weight: bold;">
+  MCP | Sahil Mohsin &mdash; <span style="font-weight: 400;">Architecting Data Governance, Analytics & Intelligent Insights</span>
+</div>
 
-    <!-- Hamburger for mobile -->
-    <div class="hamburger" onclick="toggleMenu()" style="display: none; font-size: 2rem; color: white; cursor: pointer;">
-      ☰
-    </div>
+<!-- Font Awesome hamburger (recommended for pro look) -->
+<div class="hamburger" onclick="toggleMenu()" style="display: none; font-size: clamp(0.8rem, 1vw, 1rem); color: white; cursor: pointer;">
+  <i class="fas fa-bars"></i>
+</div>
+  
+
+
   </div>
-
   <!-- Navigation Menu -->
   <nav id="typed-title" class="nav-menu">
     <ul class="nav-list">
@@ -35,17 +39,7 @@
   </nav>
 </header>
 
-  <header>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" ></script>
-    <nav class="navbar" >
-      <div class="logo">Sahil Mohsin</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+
 
   <main class="intro-section">
  <div class="intro-text" style="text-align: justify;">
@@ -129,132 +123,126 @@
   </h2>
   </div>
 
-    <div class="timeline-wrapper">
-      <div class="timeline-line"></div>
+<div class="timeline-wrapper">
+  <div class="timeline-line"></div>
 
-      <!-- Project 1 -->
-      <div class="timeline-project">
-        <div class="timeline-left">
-          <div class="project-marker">2023 Mar – Present</div>
-          <div class="project-image">
-            <img src="Assets/Projects/Microsoft.png" alt="Retail Sales Intelligence Project">
-          </div>
-        </div>
-        <div class="project-content">
-          <p><strong style="font-size:1.5rem; color:#0078d7;"> Microsoft Telemtry Team – Microsoft Millions Of Daily Products Transactional Purchase Experience Analytics</strong></p>
-          <p><strong style="font-size:1.2rem; color:#0078d7;"> Role: <strong style="font-size:1.2rem; color:#000000;"> Senior Data Analytics Specialist</strong></strong></p>
-          <br>  
-          <ul>
-              <li>Led the <strong>migration of large-scale Power BI solutions</strong> into <strong>Microsoft Fabric</strong> for enhanced performance and unified data architecture.</li>
-              <li>Managed <strong>millions of daily transactional data points</strong> with robust transformation pipelines and high-availability design.</li>
-              <li>Developed <strong>end-to-end analytics workflows</strong> using <strong>Xflow</strong>, <strong>Asimov</strong>, and <strong>Scope</strong>, enabling real-time operational intelligence.</li>
-              <li>Created and managed <strong>virtual clusters in Asimov</strong> to efficiently process massive data volumes with optimized compute resources.</li>
-              <li>Built <strong>Azure Data Factory</strong> pipelines for seamless integration of structured and semi-structured sources.</li>
-              <li>Designed and delivered advanced <strong>Power BI dashboards</strong> to visualize customer behavior trends and track retail sales performance.</li>
-              <li>Implemented <strong>predictive analytics</strong> using <strong>Azure Data Services</strong> and <strong>Cosmos DB</strong> for actionable forecasting and financial modeling.</li>
-              <li>Established and maintained strong <strong>Data Governance</strong> practices, ensuring <strong>healthcare compliance</strong>, secure data modeling, and audit-readiness.</li>
-            </ul>
-        </div>
+  <!-- Project 1 -->
+  <div class="timeline-project">
+    <div class="timeline-left">
+      <div class="project-marker">2023 Mar – Present</div>
+      <div class="project-image">
+        <img src="Assets/Projects/Microsoft.png" alt="Microsoft Telemetry Project">
       </div>
-
-      <!-- Project 2 -->
-      <div class="timeline-project">
-        <div class="timeline-left">
-          <div class="project-marker">2022 Jun - 2023 Mar</div>
-          <div class="project-image">
-            <img src="Assets/Projects/Lifetime.png" alt="Lifetime EDI Integration">
-          </div>
-        </div>
-        <div class="project-content">
-          <p><strong style="font-size:1.5rem; color:#0078d7;"> Lifetime – Azure B2B EDI Integration and Sales Data Ingestion/Orchestration Development</strong></p>
-          <p><strong style="font-size:1.2rem; color:#0078d7;"> Role: <strong style="font-size:1.2rem; color:#000000;"> Azure Integration and Data Engineer</strong></strong></p>
-          <br>  
-          <ul>
-            <li>Designed <strong>EDI workflows</strong> using <strong>Azure Logic Apps</strong> and <strong>Azure Service Bus</strong> for seamless <strong>B2B communication</strong> with <strong>data governance</strong> compliance.</li>
-            <li>Developed scalable pipelines in <strong>Azure Data Factory</strong> to ingest and transform <strong>EDI files</strong> into structured, governed data formats.</li>
-            <li>Mapped <strong>EDI X12 messages</strong> to internal schemas using <strong>Azure Functions</strong> and custom mapping logic while enforcing strict <strong>data governance</strong> standards.</li>
-            <li>Performed rigorous integration testing, resolved EDI parsing and routing errors, ensuring <strong>high-throughput processing</strong> and <strong>data integrity</strong>.</li>
-            <li>Implemented logging and monitoring using <strong>Azure Monitor</strong> and <strong>Application Insights</strong> for comprehensive EDI tracking, diagnostics, and governance auditing.</li>
-            <li>Collaborated with cross-functional teams across development, QA, and DevOps for production deployment and ongoing support with focus on <strong>data governance</strong> and compliance.</li>
-            <li>Maintained detailed documentation and designed disaster recovery strategies for EDI services in Azure, ensuring <strong>business continuity</strong> and <strong>governance adherence</strong>.</li>
-          </ul>
-
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="timeline-project">
-        <div class="timeline-left">
-          <div class="project-marker">2021 Dec – 2022 Jun</div>
-          <div class="project-image">
-            <img src="Assets/Projects/dpwORLD.png" alt="DP World CRM Project">
-          </div>
-        </div>
-        <div class="project-content">
-          <p><strong style="font-size:1.5rem; color:#0078d7;"> DP World – D365 CRM Embedded Analytics Development</strong></p>
-          <p><strong style="font-size:1.2rem; color:#0078d7;"> Role: <strong style="font-size:1.2rem; color:#000000;"> Azure Data Engineer & Power BI Developer</strong></strong></p>
-          <br>  
-          <ul>
-            <li>Built scalable ingestion pipelines with <strong>Azure Data Factory</strong> to extract CRM data from <strong>Dynamics 365</strong> and other business systems with <strong>data governance</strong> compliance.</li>
-            <li>Transformed large volumes of customer and sales data using optimized <strong>Spark jobs</strong> in <strong>Azure Databricks</strong> ensuring <strong>data quality</strong> and governance.</li>
-            <li>Stored and organized raw and curated datasets in <strong>Azure Data Lake</strong> for centralized access, secure storage, and <strong>regulatory compliance</strong>.</li>
-            <li>Developed <strong>Power BI dashboards</strong> to deliver real-time insights into customer journeys, sales funnels, and agent performance, aligned with <strong>business KPIs</strong>.</li>
-            <li>Aligned all visuals with business KPIs, including <strong>lead conversion rates</strong>, <strong>sales cycles</strong>, and <strong>customer retention metrics</strong>.</li>
-            <li>Collaborated with business analysts and marketing stakeholders to iterate on visualizations that drive <strong>executive decision-making</strong> based on governed data.</li>
-            <li>Enabled <strong>role-based access</strong> and <strong>row-level security</strong> in Power BI to safeguard sensitive customer and business data, ensuring strict <strong>data governance</strong>.</li>
-          </ul>
-
-        </div>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="timeline-project">
-        <div class="timeline-left">
-          <div class="project-marker">2021 Aug – 2021 Dec</div>
-          <div class="project-image">
-            <img src="Assets/Projects/DIB.png" alt="Dubai Islamic Bank Analytics">
-          </div>
-        </div>
-        <div class="project-content">
-          <p><strong style="font-size:1.5rem; color:#0078d7;"> Enterprise Banking Intelligence: CRM & FinOps Analytics for Dubai Islamic Bank</strong></p>
-          <p><strong style="font-size:1.2rem; color:#0078d7;"> Role: <strong style="font-size:1.2rem; color:#000000;"> Azure Data & Analytics Specialist</strong></strong></p>
-          <br>  
-          <ul>
-            <li>Integrated customer relationship management (CRM) and financial operations (FinOps) data using robust <strong>Azure Data Factory</strong> pipelines with strict <strong>data governance</strong> controls.</li>
-            <li>Created tailored <strong>Power BI dashboards</strong> for senior executives, tracking loan performance, credit risk, and profitability metrics with <strong>governed data accuracy</strong>.</li>
-            <li>Modeled complex financial data to support <strong>Islamic banking compliance</strong> and regulatory reporting (e.g., Sharia-compliant indicators) with full <strong>auditability</strong>.</li>
-            <li>Applied <strong>DAX</strong> to build calculated KPIs such as customer churn rate, asset growth, and revenue per customer segment while maintaining <strong>data security</strong>.</li>
-            <li>Implemented <strong>role-based access control</strong> and <strong>row-level security</strong> for sensitive financial and customer datasets to enforce <strong>compliance</strong>.</li>
-            <li>Stored and governed transactional and master data securely using <strong>Azure Data Lake</strong> and <strong>Cosmos DB</strong>, ensuring <strong>auditability</strong> and retention policies.</li>
-            <li>Collaborated with compliance officers and finance teams to ensure BI outputs adhered to internal audit and <strong>reporting standards</strong>.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Project 5 -->
-      <div class="timeline-project">
-        <div class="timeline-left">
-          <div class="project-marker">2019 Dec – 2021 Aug</div>
-          <div class="project-image">
-            <img src="Assets/Projects/JJ.png" alt="Johnson Stores Azure Platform">
-          </div>
-        </div>
-        <div class="project-content">
-          <p><strong style="font-size:1.5rem; color:#0078d7;"> Johnson Stores – Business Intelligence Through Machine Learning & Reporting</strong></p>
-          <p><strong style="font-size:1.2rem; color:#0078d7;"> Role: <strong style="font-size:1.2rem; color:#000000;"> Azure Data Engineer & ML Analyst</strong></strong></p>
-          <br>  
-          <ul>
-            <li>Designed and maintained scalable data pipelines using <strong>Azure Data Factory</strong> to integrate data from diverse sources.</li>
-            <li>Leveraged <strong>Azure Databricks</strong> and <strong>Data Lake Storage</strong> for large-scale data transformation and efficient batch processing.</li>
-            <li>Delivered dynamic <strong>Power BI dashboards</strong> for real-time sales, inventory tracking, and customer behavior analytics.</li>
-            <li>Built and deployed <strong>machine learning models</strong> in <strong>Python</strong> using libraries like <code>scikit-learn</code>, <code>XGBoost</code>, and <code>Pandas</code> for demand forecasting and segmentation.</li>
-            <li>Implemented <strong>data governance</strong>, <strong>lineage tracking</strong>, and <strong>access controls</strong> to ensure quality, privacy, and compliance across the data lifecycle.</li>
-            <li>Collaborated with business analysts and stakeholders to align analytics with operational goals and KPIs.</li>
-          </ul>
-        </div>
-      </div>
-
     </div>
+    <div class="project-content">
+      <h3 style="color:#0078d7;">Microsoft Telemetry Team – Millions of Daily Product Transactions Analytics</h3>
+      <p><strong style="color:#0078d7;">Role:</strong> <span style="color:#000;">Senior Data Analytics Specialist</span></p>
+      <ul>
+        <li>Led the migration of large-scale Power BI solutions into <strong>Microsoft Fabric</strong> for enhanced performance and unified data architecture.</li>
+        <li>Managed millions of daily transactional data points with robust transformation pipelines and high-availability design.</li>
+        <li>Developed end-to-end analytics workflows using <strong>Xflow</strong>, <strong>Asimov</strong>, and <strong>Scope</strong> for real-time operational intelligence.</li>
+        <li>Created and managed virtual clusters in <strong>Asimov</strong> to efficiently process massive data volumes.</li>
+        <li>Built <strong>Azure Data Factory</strong> pipelines for seamless integration of structured and semi-structured sources.</li>
+        <li>Designed advanced <strong>Power BI dashboards</strong> to visualize customer behavior and retail sales trends.</li>
+        <li>Implemented predictive analytics using <strong>Azure Data Services</strong> and <strong>Cosmos DB</strong> for forecasting and financial modeling.</li>
+        <li>Established strong <strong>Data Governance</strong> practices ensuring healthcare compliance and audit-readiness.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="timeline-project">
+    <div class="timeline-left">
+      <div class="project-marker">2022 Jun – 2023 Mar</div>
+      <div class="project-image">
+        <img src="Assets/Projects/Lifetime.png" alt="Lifetime Azure EDI Project">
+      </div>
+    </div>
+    <div class="project-content">
+      <h3 style="color:#0078d7;">Lifetime – Azure B2B EDI Integration & Sales Data Orchestration</h3>
+      <p><strong style="color:#0078d7;">Role:</strong> <span style="color:#000;">Azure Integration and Data Engineer</span></p>
+      <ul>
+        <li>Designed <strong>EDI workflows</strong> using <strong>Azure Logic Apps</strong> and <strong>Service Bus</strong> for seamless B2B integration.</li>
+        <li>Developed scalable pipelines in <strong>Azure Data Factory</strong> to ingest and transform EDI files.</li>
+        <li>Mapped <strong>EDI X12 messages</strong> using <strong>Azure Functions</strong> and custom mapping logic.</li>
+        <li>Ensured high-throughput, accurate processing with robust integration testing.</li>
+        <li>Implemented logging and diagnostics via <strong>Azure Monitor</strong> and <strong>Application Insights</strong>.</li>
+        <li>Collaborated across teams for production deployment and continuous delivery.</li>
+        <li>Maintained documentation and disaster recovery strategies ensuring continuity and compliance.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Project 3 -->
+  <div class="timeline-project">
+    <div class="timeline-left">
+      <div class="project-marker">2021 Dec – 2022 Jun</div>
+      <div class="project-image">
+        <img src="Assets/Projects/dpwORLD.png" alt="DP World CRM Analytics">
+      </div>
+    </div>
+    <div class="project-content">
+      <h3 style="color:#0078d7;">DP World – Embedded CRM Analytics with D365</h3>
+      <p><strong style="color:#0078d7;">Role:</strong> <span style="color:#000;">Azure Data Engineer & Power BI Developer</span></p>
+      <ul>
+        <li>Built ingestion pipelines in <strong>ADF</strong> to extract D365 and CRM data while ensuring governance.</li>
+        <li>Used <strong>Azure Databricks</strong> to transform large datasets with Spark for quality assurance.</li>
+        <li>Stored curated data in <strong>Data Lake</strong> to support centralized, secure analytics.</li>
+        <li>Developed <strong>Power BI dashboards</strong> for tracking customer journeys and funnel performance.</li>
+        <li>Aligned visuals with KPIs like lead conversion and customer retention metrics.</li>
+        <li>Worked with analysts to drive executive decision-making from governed data.</li>
+        <li>Implemented <strong>row-level security</strong> and <strong>role-based access</strong> to protect sensitive data.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Project 4 -->
+  <div class="timeline-project">
+    <div class="timeline-left">
+      <div class="project-marker">2021 Aug – 2021 Dec</div>
+      <div class="project-image">
+        <img src="Assets/Projects/DIB.png" alt="Dubai Islamic Bank Analytics">
+      </div>
+    </div>
+    <div class="project-content">
+      <h3 style="color:#0078d7;">Dubai Islamic Bank – CRM & FinOps Analytics</h3>
+      <p><strong style="color:#0078d7;">Role:</strong> <span style="color:#000;">Azure Data & Analytics Specialist</span></p>
+      <ul>
+        <li>Integrated CRM and FinOps data via <strong>ADF</strong> pipelines with governance controls.</li>
+        <li>Created <strong>Power BI dashboards</strong> for executives to monitor credit risk and performance.</li>
+        <li>Modeled Islamic banking data to ensure <strong>Sharia compliance</strong> and audit readiness.</li>
+        <li>Used <strong>DAX</strong> to calculate churn rate, revenue growth, and customer segmentation.</li>
+        <li>Enforced <strong>role-based access control</strong> and data security policies.</li>
+        <li>Stored sensitive data in <strong>Data Lake</strong> and <strong>Cosmos DB</strong> under retention rules.</li>
+        <li>Worked with compliance teams to meet internal audit and reporting requirements.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Project 5 -->
+  <div class="timeline-project">
+    <div class="timeline-left">
+      <div class="project-marker">2019 Dec – 2021 Aug</div>
+      <div class="project-image">
+        <img src="Assets/Projects/JJ.png" alt="Johnson Stores ML Platform">
+      </div>
+    </div>
+    <div class="project-content">
+      <h3 style="color:#0078d7;">Johnson Stores – Business Intelligence through Machine Learning</h3>
+      <p><strong style="color:#0078d7;">Role:</strong> <span style="color:#000;">Azure Data Engineer & ML Analyst</span></p>
+      <ul>
+        <li>Built scalable <strong>ADF pipelines</strong> to integrate and manage enterprise data sources.</li>
+        <li>Transformed and processed big data using <strong>Azure Databricks</strong> and <strong>Data Lake</strong>.</li>
+        <li>Created real-time <strong>Power BI dashboards</strong> for inventory and customer analytics.</li>
+        <li>Developed ML models in <strong>Python</strong> using <code>scikit-learn</code>, <code>XGBoost</code>, and <code>Pandas</code>.</li>
+        <li>Applied governance best practices including <strong>data lineage</strong> and access management.</li>
+        <li>Collaborated with stakeholders to drive KPIs via AI-enhanced analytics solutions.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
 
 </section>
 
@@ -268,44 +256,24 @@
 
   <div class="tech-grid">
     <div class="tech-slide">
-      <div class="tech-card"><img src="Assets/Techstack/Azure.png" alt="Python Logo" /></div>
-      <div class="tech-card"><img src="Assets/Techstack/AzureSynapseAnalytics.webp" alt="Machine Learning Logo" /></div>
-      <div class="tech-card"><img src="Assets/Techstack/AzureDataFactory.png" alt="Power BI Logo" /></div>
-      <div class="tech-card"><img src="Assets/Techstack/AzureDataLake.png" alt="SQL Logo" /></div>
-      <div class="tech-card"><img src="Assets/Techstack/AzureBlobStorage.png" alt="Azure Data Factory Logo" /></div>
-      <div class="tech-card"><img src="Assets/Techstack/Fabrics.webp" alt="Synapse Analytics Logo" /></div>
-      <div class="tech-card"><img src="Assets/Techstack/PowerBI.png" alt="Dynamics 365 Logo" /></div>
-      <div class="tech-card"><img src="Assets/Techstack/dynamics365.png" alt="Power Platform Logo" /></div>
-      <div class="tech-card"><img src="Assets/Techstack/PowerPlatform.webp" alt="Azure Data Lake Logo" /></div>
-      <div class="tech-card"><img src="Assets/Techstack/python.svg" alt="Pandas Logo" /></div>
-      <div class="tech-card"><img src="Assets/Techstack/PyTorch.svg" alt="Scikit-learn Logo" /></div>
-      <div class="tech-card"><img src="Assets/Techstack/Scikit_learn.svg" alt="TensorFlow Logo" /></div>
-      <div class="tech-card"><img src="Assets/Techstack/Tensorflow.svg" alt="PyTorch Logo" /></div>
-      <div class="tech-card"><img src="Assets/Techstack/Pandas.svg" alt="REST API Logo" /></div>
-      <div class="tech-card"><img src="Assets/Techstack/SQL.png" alt="DAX Logo" /></div>
-      <div class="tech-card"><img src="Assets/Techstack/Git.svg" alt="Data Visualization Logo" /></div>
+      <div class="tech-card"><img src="Assets/Techstack/Azure.png" /></div>
+      <div class="tech-card"><img src="Assets/Techstack/AzureSynapseAnalytics.webp"  /></div>
+      <div class="tech-card"><img src="Assets/Techstack/AzureDataFactory.png"  /></div>
+      <div class="tech-card"><img src="Assets/Techstack/AzureDataLake.png" /></div>
+      <div class="tech-card"><img src="Assets/Techstack/AzureBlobStorage.png" /></div>
+      <div class="tech-card"><img src="Assets/Techstack/Fabrics.webp" /></div>
+      <div class="tech-card"><img src="Assets/Techstack/PowerBI.png" /></div>
+      <div class="tech-card"><img src="Assets/Techstack/dynamics365.png"/></div>
+      <div class="tech-card"><img src="Assets/Techstack/PowerPlatform.webp"  /></div>
+      <div class="tech-card"><img src="Assets/Techstack/python.svg" /></div>
+      <div class="tech-card"><img src="Assets/Techstack/PyTorch.svg"  /></div>
+      <div class="tech-card"><img src="Assets/Techstack/Scikit_learn.svg" /></div>
+      <div class="tech-card"><img src="Assets/Techstack/Tensorflow.svg"  /></div>
+      <div class="tech-card"><img src="Assets/Techstack/Pandas.svg" /></div>
+      <div class="tech-card"><img src="Assets/Techstack/SQL.png" /></div>
+      <div class="tech-card"><img src="Assets/Techstack/Git.svg" /></div>
     </div>
 
-    <div class="tech-slide" aria-hidden="true">
-      <!-- duplicate for seamless scrolling -->
-      <div class="tech-card"><img src="images/python.png" alt="Python Logo" /></div>
-      <div class="tech-card"><img src="images/machine_learning.png" alt="Machine Learning Logo" /></div>
-      <div class="tech-card"><img src="images/power_bi.png" alt="Power BI Logo" /></div>
-      <div class="tech-card"><img src="images/sql.png" alt="SQL Logo" /></div>
-      <div class="tech-card"><img src="images/azure_data_factory.png" alt="Azure Data Factory Logo" /></div>
-      <div class="tech-card"><img src="images/synapse.png" alt="Synapse Analytics Logo" /></div>
-      <div class="tech-card"><img src="images/dynamics_365.png" alt="Dynamics 365 Logo" /></div>
-      <div class="tech-card"><img src="images/power_platform.png" alt="Power Platform Logo" /></div>
-      <div class="tech-card"><img src="images/azure_data_lake.png" alt="Azure Data Lake Logo" /></div>
-      <div class="tech-card"><img src="images/pandas.png" alt="Pandas Logo" /></div>
-      <div class="tech-card"><img src="images/scikit_learn.png" alt="Scikit-learn Logo" /></div>
-      <div class="tech-card"><img src="images/tensorflow.png" alt="TensorFlow Logo" /></div>
-      <div class="tech-card"><img src="images/pytorch.png" alt="PyTorch Logo" /></div>
-      <div class="tech-card"><img src="images/rest_api.png" alt="REST API Logo" /></div>
-      <div class="tech-card"><img src="images/dax.png" alt="DAX Logo" /></div>
-      <div class="tech-card"><img src="images/data_visualization.png" alt="Data Visualization Logo" /></div>
-    </div>
-  </div>
 </section>
 
 <section class="certs" id="certifications" class="nav-link" style="text-decoration: none; color: #ffffff; font-weight: 500;">
@@ -459,6 +427,52 @@ Any team with Sahil will be more likely to achieve their mission."
       </div>
       <!-- Add more endorsements here -->
       
+      <!-- Endorsement 2 -->
+      <div class="endorsement-card">
+        <img src="Assets/ClientEndorsement/Muhammad Zeeshan Mahmood.jpg" alt="Endorser" />
+        <h3>Muhammad Zeeshan Mahmood</h3>
+        <p class="endorser-title">Senior Product Manager at <strong>pmo365</strong></p>
+        <p class="endorsement-text">"My first interaction with Sahil in illumina was when I was working on Azure Functions and D365 CE Sales integration and was stuck on problem. I was amazed how Sahil helped me to fix the issue on which I was working from a week. Since then we are tech buddies discussing different technological ideas and new technology advancement.
+
+I am amazed with the knowledge Sahil have related to current and future technology trends. He would be an excellent addition to any team in which he will be working. If I am making a new team Sahil will definitely be in it. I would recommend him to to any team working on Data Science and Dynamics 365 projects."
+        </p>
+      </div>
+
+            <!-- Endorsement 2 -->
+      <div class="endorsement-card">
+        <img src="Assets/ClientEndorsement/Sheikh Sohail Hussain.jpeg" alt="Endorser" />
+        <h3>Sheikh Sohail Hussain</h3>
+        <p class="endorser-title">Technical Architect Dynamics 365 at <strong>TATA Consultancy</strong></p>
+        <p class="endorsement-text">"I had the pleasure of working with Sahil Mohsin and I can confidently say that he is a talented and dedicated professional. During the time we worked together, I was thoroughly impressed by his technical abilities, attention to detail, and ability to work under tight deadlines, not only is Sahil a skilled developer, but he is also a team player. He has excellent communication skills and is always willing to lend a helping hand to his colleagues. He is a great collaborator and is able to work effectively in a team environment.
+
+I highly recommend Sahil. He will be a valuable asset to any team and I am confident that he will continue to excel in his career."
+        </p>
+      </div>
+
+       <!-- Endorsement 1 -->
+      <div class="endorsement-card">
+        <img src="Assets/ClientEndorsement/Chris Walker.jpeg" alt="Endorser" />
+        <h3>Chris Walker</h3>
+        <p class="endorser-title">Senior Software Engineer at <strong>Microsoft</strong></p>
+        <p class="endorsement-text">"Sahil's work in Azure, Fabric, SCOPE, Azure Data Factories, Power BI, and more have been impressive, as he has built robust data analytics systems providing insights into many millions of daily transactions.
+
+Sahil is an excellent engineer and team member. His approach to large-scale problems yield value from the earliest work completed. Sahil is curious - he always wants to understand more - and he turns this into a super-power by being a well-informed mentor, able to help his coworkers be more effective when they head into areas he's familiar with.
+
+Any team with Sahil will be more likely to achieve their mission."
+        </p>
+      </div>      
+
+      <!-- Endorsement 1 -->
+      <div class="endorsement-card">
+        <img src="Assets/ClientEndorsement/Ryan Majdalawieh.jpeg" alt="Endorser" />
+        <h3>Ryan Majdalawieh</h3>
+        <p class="endorser-title">Product Manager II at <strong>Microsoft</strong></p>
+        <p class="endorsement-text">"Working with Sahil is an absolute pleasure. He has a wide range of expertise across various Azure and data visualization products, which helps expand the scope and opportunities of our team to further strengthen our analytics atmosphere. Pairing his expertise with strong attention to detail and a growth mindset, Sahil helps drive true impact in Microsoft’s Purchase Experience team. His collaborative nature and commitment to innovating our area as new technologies like Fabric and AI emerge is very much appreciated in the team, and I am excited to see how we continue to grow and mature our area in the future!"
+        </p>
+      </div>
+      <!-- Add more endorsements here -->
+      
+
     </div>
   </div>
 </section>
@@ -496,17 +510,19 @@ Any team with Sahil will be more likely to achieve their mission."
 
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
-  var typed = new Typed('#typed-name', {
-    strings: [
-      "Hi, I'm Sahil Mohsin", 
-      "Data-To-Action Specialist 🎖️"
-    ],
-    typeSpeed: 50,
-    backSpeed: 25,
-    backDelay: 2000,
-    loop: true
+  document.addEventListener("DOMContentLoaded", function () {
+    new Typed('#typed-name', {
+      strings: [
+        "Hi, I'm Sahil Mohsin", 
+        "Data-To-Action Specialist 🎖️"
+      ],
+      typeSpeed: 50,
+      backSpeed: 25,
+      backDelay: 2000,
+      loop: true
+    });
   });
 </script>
 
