@@ -21,10 +21,6 @@
 <div class="hamburger" onclick="toggleMenu()" aria-label="Open navigation" tabindex="0">
   <i class="fas fa-bars"></i>
 </div>
-
-
-  </div>
-  <!-- Navigation Menu -->
   <nav id="typed-title" class="nav-menu">
     <ul class="nav-list">
       <li><a href="#about" class="nav-link">About</a></li>
@@ -38,6 +34,10 @@
       
     </ul>
   </nav>
+
+  </div>
+  <!-- Navigation Menu -->
+
 </header>
 
 
@@ -338,32 +338,37 @@
   </div>
 
   <!-- Details Panels -->
-  <div class="edu-details">
-    <div class="edu-panel" data-step="1">
-      <h3>Bachelor in Computer Science</h3>
-      <p>National University of Computer & Emerging Sciences - FAST CFD Campus</p>
-      <ul>
-        <li><strong> Final Year Project: </strong>   <p style="max-width: 1000px; margin: 0 auto; padding: 0rem 4rem; text-align: justify;">
-    During my <strong>Bachelor’s in Computer Science</strong> at <em>FAST – National University of Computer & Emerging Sciences</em>,
-    I developed a mobile application for <strong>early-stage skin cancer detection</strong> as part of my Final Year Project. 
-    The app was built using <strong>Flutter</strong>, deploying real-time <strong>Convolutional Neural Networks (CNNs)</strong> for live detection using the phone’s camera. 
-    I handled model selection, dataset preprocessing, and TensorFlow Lite integration to ensure lightweight and responsive performance on mobile devices.
-  </p></li>
-      </ul>
+<div class="edu-details">
+  <!-- Bachelor Panel -->
+  <div class="edu-panel" data-step="1">
+    <h3 style="color:#0047ab; margin-bottom:0.5rem;">Bachelor in Computer Science</h3>
+    <div style="font-weight:500; margin-bottom:0.5rem;">National University of Computer & Emerging Sciences - FAST CFD Campus</div>
+    <div style="margin-bottom:0.5rem;">
+      <span style="font-weight:bold; color:#0078d7;">Final Year Project:</span>
     </div>
-    <div class="edu-panel" data-step="2" style="display:none">
-      <h3>Master in Data Science</h3>
-      <p>National University of Computer & Emerging Sciences - FAST LHR Campus</p>
-      <ul>
-        <li><strong> Thesis: </strong>   <p style="max-width: 1000px; margin: 0 auto; padding: 0rem 4rem; text-align: justify;">
-            For my <strong>Master’s in Data Science</strong>, my thesis centered around the real-world Kaggle competition titled 
-        <strong>“HuBMAP + HPA – Hacking the Human Body.”</strong> The objective was to segment functional tissue units (FTUs) from human organ images 
-        to support biomedical research. I applied advanced image segmentation using <strong>U-Net</strong> and transformer-based architectures, 
-        integrating them with cloud-based training pipelines. This project merged biomedical imaging, machine learning, and domain-specific processing, 
-        showcasing my ability to apply data science in impactful healthcare contexts.  </p></li>
-      </ul>
-    </div>
+    <p style="max-width: 1200px; margin: 0 auto 0.5rem auto; padding: 0 2rem; text-align: justify;">
+      During my <strong>Bachelor’s in Computer Science</strong> at <em>FAST – National University of Computer & Emerging Sciences</em>,
+      I developed a mobile application for <strong>early-stage skin cancer detection</strong> as part of my Final Year Project.
+      The app was built using <strong>Flutter</strong>, deploying real-time <strong>Convolutional Neural Networks (CNNs)</strong> for live detection using the phone’s camera.
+      I handled model selection, dataset preprocessing, and TensorFlow Lite integration to ensure lightweight and responsive performance on mobile devices.
+    </p>
   </div>
+  <!-- Master Panel -->
+  <div class="edu-panel" data-step="2" style="display:none">
+    <h3 style="color:#0047ab; margin-bottom:0.5rem;">Master in Data Science</h3>
+    <div style="font-weight:500; margin-bottom:0.5rem;">National University of Computer & Emerging Sciences - FAST LHR Campus</div>
+    <div style="margin-bottom:0.5rem;">
+      <span style="font-weight:bold; color:#0078d7;">Thesis:</span>
+    </div>
+    <p style="max-width: 1200px; margin: 0 auto 0.5rem auto; padding: 0 2rem; text-align: justify;">
+      For my <strong>Master’s in Data Science</strong>, my thesis centered around the real-world Kaggle competition titled
+      <strong>“HuBMAP + HPA – Hacking the Human Body.”</strong> The objective was to segment functional tissue units (FTUs) from human organ images
+      to support biomedical research. I applied advanced image segmentation using <strong>U-Net</strong> and transformer-based architectures,
+      integrating them with cloud-based training pipelines. This project merged biomedical imaging, machine learning, and domain-specific processing,
+      showcasing my ability to apply data science in impactful healthcare contexts.
+    </p>
+  </div>
+</div>
 
   <!-- Nav Buttons -->
   <div class="edu-nav">
@@ -530,7 +535,7 @@ Any team with Sahil will be more likely to achieve their mission."
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
   new Typed("#typed-techstack", {
-    strings: ["My Tech Stack Experience 💯🚀🎯"],
+    strings: ["Tech Stack Experience 💯"],
     typeSpeed: 60,
     backSpeed: 30,
     loop: true
@@ -548,7 +553,7 @@ Any team with Sahil will be more likely to achieve their mission."
 
 <script>
   new Typed("#typed-cert-title", {
-    strings: ["My Certification Achievements 🎓 "],
+    strings: ["Certification Achievements 🎓 "],
     typeSpeed: 60,
     backSpeed: 30,
     loop: true
